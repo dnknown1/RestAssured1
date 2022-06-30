@@ -3,12 +3,17 @@ package restAssuredProject;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
-import static io.restassured.RestAssured.given;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 public class TestRun {
-	private final String BASE_URL = "http://localhost:3000/";
+	private final String BASE_URI = "http://localhost:3000/";
 	private final String API_PATH = "testpath/";
+	
+	public RequestSpecification connect(String base){
+		RestAssured.baseURI = base;
+		return RestAssured.given();
+	}
 	
 	private Response read(String path){
 		return RestAssured.get(path);
@@ -19,7 +24,7 @@ public class TestRun {
 	}
 	
 	private String appendId(String i){
-		return BASE_URL+API_PATH+i;
+		return BASE_URI+API_PATH+i;
 	}
 	
 	@Test
@@ -29,7 +34,7 @@ public class TestRun {
 	
 	//@Test
 	public void firstGET(){
-		System.out.println(read(BASE_URL+API_PATH).asString());
+		System.out.println(read(BASE_URI+API_PATH).asString());
 	}
 	
 	//@Test
@@ -40,18 +45,16 @@ public class TestRun {
 	
 	@Test
 	public void anotherGET(){
-		RestAssured.baseURI = BASE_URL;
-		given()
+		connect(BASE_URI)
 		.get(API_PATH)
 		.then()
 		.statusCode(200)
 		.log().all();
 	}
 
-	@Test
+	//@Test
 	public void anotherDELETE(){
-		RestAssured.baseURI = BASE_URL;
-		given()
+		connect(BASE_URI)
 		.delete(API_PATH+"2")
 		.then()
 		.statusCode(200)
