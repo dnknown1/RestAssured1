@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2469" started-at="2022-06-30T09:56:37Z" finished-at="2022-06-30T09:56:40Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2469" started-at="2022-06-30T09:56:37Z" finished-at="2022-06-30T09:56:40Z">
+      <class name="restAssuredProject.TestRun">
+        <test-method status="PASS" signature="anotherDELETE()[pri:0, instance:restAssuredProject.TestRun@1888ff2c]" name="anotherDELETE" duration-ms="2415" started-at="2022-06-30T15:26:37Z" finished-at="2022-06-30T15:26:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- anotherDELETE -->
+        <test-method status="PASS" signature="anotherGET()[pri:0, instance:restAssuredProject.TestRun@1888ff2c]" name="anotherGET" duration-ms="43" started-at="2022-06-30T15:26:39Z" finished-at="2022-06-30T15:26:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- anotherGET -->
+        <test-method status="PASS" signature="dryRun()[pri:0, instance:restAssuredProject.TestRun@1888ff2c]" name="dryRun" duration-ms="1" started-at="2022-06-30T15:26:40Z" finished-at="2022-06-30T15:26:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dryRun -->
+      </class> <!-- restAssuredProject.TestRun -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
