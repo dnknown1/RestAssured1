@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\003PXD744\AppData\Local\Temp\testng-eclipse-529241860\testng-customsuite.xml</span>
+                    <span>C:\Users\003PXD744\AppData\Local\Temp\testng-eclipse--1110406355\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,6 +103,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="restAssuredProject.RaProject" hash-for-method="anotherGET(dnknown)">anotherGET(dnknown)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="restAssuredProject.RaProject" hash-for-method="firstDELETE(dnknown)">firstDELETE(dnknown)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -143,6 +148,14 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="firstDELETE(dnknown)">
+                  </a> <!-- firstDELETE(dnknown) -->
+                  <span class="method-name">firstDELETE</span>
+                  <span class="parameters">(dnknown)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="firstPOST(dnknown, 003pxd, india, abc@xyz.com, pass123, 9876543210, 0)">
                   </a> <!-- firstPOST(dnknown, 003pxd, india, abc@xyz.com, pass123, 9876543210, 0) -->
                   <span class="method-name">firstPOST</span>
@@ -162,7 +175,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\003PXD744\AppData\Local\Temp\testng-eclipse-529241860\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\003PXD744\AppData\Local\Temp\testng-eclipse--1110406355\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -211,24 +224,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'firstPOST')
 data.setCell(0, 2, 'restAssuredProject.RaProject')
-data.setCell(0, 3, 3271);
+data.setCell(0, 3, 3331);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'anotherGET')
+data.setCell(1, 1, 'firstPUT')
 data.setCell(1, 2, 'restAssuredProject.RaProject')
-data.setCell(1, 3, 1458);
+data.setCell(1, 3, 1435);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'firstPUT')
+data.setCell(2, 1, 'anotherGET')
 data.setCell(2, 2, 'restAssuredProject.RaProject')
-data.setCell(2, 3, 1429);
+data.setCell(2, 3, 1423);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'firstDELETE')
+data.setCell(3, 2, 'restAssuredProject.RaProject')
+data.setCell(3, 3, 1385);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -260,12 +277,16 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">anotherGET(dnknown)</span>
-                <span class="method-start">3272 ms</span>
+                <span class="method-name">firstPUT(dnknown, 003pxd, 744, abc@xyz.com, pass123, 9876543210, 0)</span>
+                <span class="method-start">3332 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">firstPUT(dnknown, 003pxd, 744, abc@xyz.com, pass123, 9876543210, 0)</span>
-                <span class="method-start">4731 ms</span>
+                <span class="method-name">firstDELETE(dnknown)</span>
+                <span class="method-start">4768 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">anotherGET(dnknown)</span>
+                <span class="method-start">6154 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

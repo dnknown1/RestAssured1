@@ -52,7 +52,7 @@ public class RaProject {
 		.log().all();
 	}
 
-	//@Test(dependsOnMethods={"firstPUT"},dataProvider="deleteData")
+	@Test(dependsOnMethods={"firstPUT"},dataProvider="deleteData")
 	public void firstDELETE(String id){
 		connect(BASE_URI)
 		.delete(API_PATH+id)
@@ -61,7 +61,7 @@ public class RaProject {
 		.log().all();
 	}
 
-	@Test(dataProvider="deleteData")//(dependsOnMethods={"firstDELETE"})
+	@Test(dataProvider="deleteData", dependsOnMethods={"firstDELETE"})
 	public void anotherGET(String u){
 		System.out.println(u);
 		connect(BASE_URI)
@@ -86,7 +86,7 @@ public class RaProject {
 	@DataProvider(name="postData")
 	public Object[][] providerPOST(){
 		Object[][] postData = {
-			{uname,"003pxd","india", "abc@xyz.com", "pass123","9876543210", 0},
+			{uname,"003pxd","india", "abc@xyz.com", "pass123","9876543210", 0}
 		};		
 		return postData;
 	}

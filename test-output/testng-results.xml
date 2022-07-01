@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6168" started-at="2022-07-01T09:46:04Z" finished-at="2022-07-01T09:46:10Z">
+  <suite name="Default suite" duration-ms="7584" started-at="2022-07-01T09:48:12Z" finished-at="2022-07-01T09:48:20Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6168" started-at="2022-07-01T09:46:04Z" finished-at="2022-07-01T09:46:10Z">
+    <test name="Default test" duration-ms="7584" started-at="2022-07-01T09:48:12Z" finished-at="2022-07-01T09:48:20Z">
       <class name="restAssuredProject.RaProject">
-        <test-method status="PASS" signature="firstPOST(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int)[pri:0, instance:restAssuredProject.RaProject@2a18f23c]" name="firstPOST" duration-ms="3271" started-at="2022-07-01T15:16:04Z" data-provider="postData" finished-at="2022-07-01T15:16:07Z">
+        <test-method status="PASS" signature="firstPOST(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int)[pri:0, instance:restAssuredProject.RaProject@2a18f23c]" name="firstPOST" duration-ms="3331" started-at="2022-07-01T15:18:12Z" data-provider="postData" finished-at="2022-07-01T15:18:15Z">
           <params>
             <param index="0">
               <value>
@@ -48,18 +48,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstPOST -->
-        <test-method status="PASS" signature="anotherGET(java.lang.String)[pri:0, instance:restAssuredProject.RaProject@2a18f23c]" name="anotherGET" duration-ms="1458" started-at="2022-07-01T15:16:07Z" data-provider="deleteData" finished-at="2022-07-01T15:16:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dnknown]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- anotherGET -->
-        <test-method status="PASS" signature="firstPUT(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int)[pri:0, instance:restAssuredProject.RaProject@2a18f23c]" name="firstPUT" duration-ms="1429" started-at="2022-07-01T15:16:09Z" data-provider="putData" depends-on-methods="restAssuredProject.RaProject.firstPOST" finished-at="2022-07-01T15:16:10Z">
+        <test-method status="PASS" signature="firstPUT(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int)[pri:0, instance:restAssuredProject.RaProject@2a18f23c]" name="firstPUT" duration-ms="1435" started-at="2022-07-01T15:18:15Z" data-provider="putData" depends-on-methods="restAssuredProject.RaProject.firstPOST" finished-at="2022-07-01T15:18:17Z">
           <params>
             <param index="0">
               <value>
@@ -100,6 +89,28 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstPUT -->
+        <test-method status="PASS" signature="firstDELETE(java.lang.String)[pri:0, instance:restAssuredProject.RaProject@2a18f23c]" name="firstDELETE" duration-ms="1385" started-at="2022-07-01T15:18:17Z" data-provider="deleteData" depends-on-methods="restAssuredProject.RaProject.firstPUT" finished-at="2022-07-01T15:18:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dnknown]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstDELETE -->
+        <test-method status="PASS" signature="anotherGET(java.lang.String)[pri:0, instance:restAssuredProject.RaProject@2a18f23c]" name="anotherGET" duration-ms="1423" started-at="2022-07-01T15:18:18Z" data-provider="deleteData" depends-on-methods="restAssuredProject.RaProject.firstDELETE" finished-at="2022-07-01T15:18:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dnknown]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- anotherGET -->
       </class> <!-- restAssuredProject.RaProject -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
