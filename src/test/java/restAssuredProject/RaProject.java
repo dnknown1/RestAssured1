@@ -38,10 +38,23 @@ public class RaProject {
 	private JSONObject useJson(){
 		return new JSONObject();
 	}
-
+	
+	@Test(dataProvider="loginData", dependsOnMethods={"firstPOST"})
+	public void login(String u, String p){
+		System.out.println("LOG IN");
+		connect(BASE_URI)
+		.queryParam("username", u)
+		.queryParam("password", p)
+		.get(API_PATH+"login")
+		.then()
+		.statusCode(200)
+		.log().all();
+	}
 	
 	@Test(dependsOnMethods={"firstPOST"}, dataProvider="putData")
 	public void firstPUT(String u, String fn, String ln, String em, String pwd, String ph, int st){
+		System.out.println("PUT");
+
 		connect(BASE_URI)
 		.contentType(ContentType.JSON)
 		.body(genUserData(u, fn, ln, em, pwd, ph, st))
@@ -54,6 +67,7 @@ public class RaProject {
 
 	@Test(dependsOnMethods={"firstPUT"},dataProvider="deleteData")
 	public void firstDELETE(String id){
+		System.out.println("DELETE");
 		connect(BASE_URI)
 		.delete(API_PATH+id)
 		.then()
@@ -63,7 +77,7 @@ public class RaProject {
 
 	@Test(dataProvider="deleteData", dependsOnMethods={"firstDELETE"})
 	public void anotherGET(String u){
-		System.out.println(u);
+		System.out.println("GET");
 		connect(BASE_URI)
 		.get(API_PATH + u)
 		.then()
@@ -103,6 +117,12 @@ public class RaProject {
 	public Object[][] providerDELETE(){
 		Object[][] deleteData = {{uname}};
 		return deleteData;
+	}
+	
+	@DataProvider(name="loginData")
+	public Object[][] providerLogin(){
+		Object[][] loginData = {{uname, "pass123"}};
+		return loginData;
 	}
 }
 
