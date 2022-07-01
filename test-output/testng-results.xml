@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1748" started-at="2022-06-30T11:06:31Z" finished-at="2022-06-30T11:06:33Z">
+  <suite name="Default suite" duration-ms="3036" started-at="2022-07-01T05:47:30Z" finished-at="2022-07-01T05:47:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1748" started-at="2022-06-30T11:06:31Z" finished-at="2022-06-30T11:06:33Z">
-      <class name="restAssuredProject.TestRun">
-        <test-method status="PASS" signature="anotherGET()[pri:0, instance:restAssuredProject.TestRun@256216b3]" name="anotherGET" duration-ms="1738" started-at="2022-06-30T16:36:31Z" finished-at="2022-06-30T16:36:33Z">
+    <test name="Default test" duration-ms="3036" started-at="2022-07-01T05:47:30Z" finished-at="2022-07-01T05:47:33Z">
+      <class name="restAssuredProject.D_01072022">
+        <test-method status="PASS" signature="firstPOST()[pri:0, instance:restAssuredProject.D_01072022@28f67ac7]" name="firstPOST" duration-ms="2380" started-at="2022-07-01T11:17:30Z" finished-at="2022-07-01T11:17:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstPOST -->
+        <test-method status="PASS" signature="firstPUT()[pri:0, instance:restAssuredProject.D_01072022@28f67ac7]" name="firstPUT" duration-ms="35" started-at="2022-07-01T11:17:32Z" depends-on-methods="restAssuredProject.D_01072022.firstPOST" finished-at="2022-07-01T11:17:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstPUT -->
+        <test-method status="PASS" signature="firstDELETE()[pri:0, instance:restAssuredProject.D_01072022@28f67ac7]" name="firstDELETE" duration-ms="47" started-at="2022-07-01T11:17:32Z" depends-on-methods="restAssuredProject.D_01072022.firstPUT" finished-at="2022-07-01T11:17:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstDELETE -->
+        <test-method status="PASS" signature="anotherGET()[pri:0, instance:restAssuredProject.D_01072022@28f67ac7]" name="anotherGET" duration-ms="565" started-at="2022-07-01T11:17:32Z" depends-on-methods="restAssuredProject.D_01072022.firstDELETE" finished-at="2022-07-01T11:17:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- anotherGET -->
-        <test-method status="PASS" signature="dryRun()[pri:0, instance:restAssuredProject.TestRun@256216b3]" name="dryRun" duration-ms="1" started-at="2022-06-30T16:36:33Z" finished-at="2022-06-30T16:36:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dryRun -->
-      </class> <!-- restAssuredProject.TestRun -->
+      </class> <!-- restAssuredProject.D_01072022 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
