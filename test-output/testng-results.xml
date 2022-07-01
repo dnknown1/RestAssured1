@@ -1,113 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3178" started-at="2022-07-01T07:28:32Z" finished-at="2022-07-01T07:28:35Z">
+  <suite name="Default suite" duration-ms="6168" started-at="2022-07-01T09:46:04Z" finished-at="2022-07-01T09:46:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3178" started-at="2022-07-01T07:28:32Z" finished-at="2022-07-01T07:28:35Z">
-      <class name="restAssuredProject.D_01072022">
-        <test-method status="PASS" signature="firstPOST(java.lang.String, java.lang.String)[pri:0, instance:restAssuredProject.D_01072022@2a18f23c]" name="firstPOST" duration-ms="2347" started-at="2022-07-01T12:58:32Z" data-provider="postData" finished-at="2022-07-01T12:58:34Z">
+    <test name="Default test" duration-ms="6168" started-at="2022-07-01T09:46:04Z" finished-at="2022-07-01T09:46:10Z">
+      <class name="restAssuredProject.RaProject">
+        <test-method status="PASS" signature="firstPOST(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int)[pri:0, instance:restAssuredProject.RaProject@2a18f23c]" name="firstPOST" duration-ms="3271" started-at="2022-07-01T15:16:04Z" data-provider="postData" finished-at="2022-07-01T15:16:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[RA1]]>
+                <![CDATA[dnknown]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[init]]>
+                <![CDATA[003pxd]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[india]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[abc@xyz.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[pass123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[9876543210]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstPOST -->
-        <test-method status="PASS" signature="firstPOST(java.lang.String, java.lang.String)[pri:0, instance:restAssuredProject.D_01072022@2a18f23c]" name="firstPOST" duration-ms="24" started-at="2022-07-01T12:58:34Z" data-provider="postData" finished-at="2022-07-01T12:58:34Z">
+        <test-method status="PASS" signature="anotherGET(java.lang.String)[pri:0, instance:restAssuredProject.RaProject@2a18f23c]" name="anotherGET" duration-ms="1458" started-at="2022-07-01T15:16:07Z" data-provider="deleteData" finished-at="2022-07-01T15:16:09Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[RA2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[init]]>
+                <![CDATA[dnknown]]>
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- firstPOST -->
-        <test-method status="PASS" signature="firstPUT(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:restAssuredProject.D_01072022@2a18f23c]" name="firstPUT" duration-ms="85" started-at="2022-07-01T12:58:34Z" data-provider="putData" depends-on-methods="restAssuredProject.D_01072022.firstPOST" finished-at="2022-07-01T12:58:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[RA1]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[ack]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- firstPUT -->
-        <test-method status="PASS" signature="firstPUT(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:restAssuredProject.D_01072022@2a18f23c]" name="firstPUT" duration-ms="49" started-at="2022-07-01T12:58:34Z" data-provider="putData" depends-on-methods="restAssuredProject.D_01072022.firstPOST" finished-at="2022-07-01T12:58:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[RA2]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[ack]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- firstPUT -->
-        <test-method status="PASS" signature="firstDELETE(java.lang.String)[pri:0, instance:restAssuredProject.D_01072022@2a18f23c]" name="firstDELETE" duration-ms="60" started-at="2022-07-01T12:58:34Z" data-provider="deleteData" depends-on-methods="restAssuredProject.D_01072022.firstPUT" finished-at="2022-07-01T12:58:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- firstDELETE -->
-        <test-method status="PASS" signature="firstDELETE(java.lang.String)[pri:0, instance:restAssuredProject.D_01072022@2a18f23c]" name="firstDELETE" duration-ms="23" started-at="2022-07-01T12:58:34Z" data-provider="deleteData" depends-on-methods="restAssuredProject.D_01072022.firstPUT" finished-at="2022-07-01T12:58:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- firstDELETE -->
-        <test-method status="PASS" signature="anotherGET()[pri:0, instance:restAssuredProject.D_01072022@2a18f23c]" name="anotherGET" duration-ms="563" started-at="2022-07-01T12:58:34Z" depends-on-methods="restAssuredProject.D_01072022.firstDELETE" finished-at="2022-07-01T12:58:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- anotherGET -->
-      </class> <!-- restAssuredProject.D_01072022 -->
+        <test-method status="PASS" signature="firstPUT(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int)[pri:0, instance:restAssuredProject.RaProject@2a18f23c]" name="firstPUT" duration-ms="1429" started-at="2022-07-01T15:16:09Z" data-provider="putData" depends-on-methods="restAssuredProject.RaProject.firstPOST" finished-at="2022-07-01T15:16:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dnknown]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[003pxd]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[744]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[abc@xyz.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[pass123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[9876543210]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstPUT -->
+      </class> <!-- restAssuredProject.RaProject -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

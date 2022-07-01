@@ -1,54 +1,58 @@
 package restAssuredProject;
 
+
 import org.json.simple.JSONObject;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class D_01072022 {
-	private final String BASE_URI = "http://localhost:3000/";
-	private final String API_PATH = "testpath/";
+public class RaProject {
+	private final String BASE_URI = "https://petstore.swagger.io/v2/";
+	private final String API_PATH = "user/";
 	
-	private static String fid = "0"; 
-	
-	public void setFid(String id){
-		fid = String.valueOf(Integer.valueOf(fid)+ Integer.valueOf(id));
-	}
+	private static String uname = "dnknown"; 
+
 	public RequestSpecification connect(String base){
 		RestAssured.baseURI = base;
 		return RestAssured.given();
 	}
 	
 	@SuppressWarnings("unchecked")
-	private String useJsonData(String rf, String sts){
+	private String genUserData(String user, String fn, String ln, String em, String pwd, String ph, int st){
 		JSONObject j1 = useJson();
-		j1.put("req_from", rf);
-		j1.put("status", sts);
+		j1.put("username", user);
+		j1.put("firstName", fn);
+		j1.put("lastName", ln);
+		j1.put("email", em);
+		j1.put("password", pwd);
+		j1.put("phone", ph);
+		j1.put("userStatus", st);
+		
+		
 		return j1.toString();
 	}
-
+	
 	private JSONObject useJson(){
 		return new JSONObject();
 	}
 
 	
 	@Test(dependsOnMethods={"firstPOST"}, dataProvider="putData")
-	public void firstPUT(String id, String rf, String sts){
+	public void firstPUT(String u, String fn, String ln, String em, String pwd, String ph, int st){
 		connect(BASE_URI)
 		.contentType(ContentType.JSON)
-		.body(useJsonData(rf, sts))
+		.body(genUserData(u, fn, ln, em, pwd, ph, st))
 		.when()
-		.put(API_PATH+id)
+		.put(API_PATH+u)
 		.then()
 		.statusCode(200)
 		.log().all();
 	}
 
-	@Test(dependsOnMethods={"firstPUT"},dataProvider="deleteData")
+	//@Test(dependsOnMethods={"firstPUT"},dataProvider="deleteData")
 	public void firstDELETE(String id){
 		connect(BASE_URI)
 		.delete(API_PATH+id)
@@ -57,41 +61,32 @@ public class D_01072022 {
 		.log().all();
 	}
 
-	@Test(dependsOnMethods={"firstDELETE"})
-	public void anotherGET(){
+	@Test(dataProvider="deleteData")//(dependsOnMethods={"firstDELETE"})
+	public void anotherGET(String u){
+		System.out.println(u);
 		connect(BASE_URI)
-		.get(API_PATH)
+		.get(API_PATH + u)
 		.then()
 		.statusCode(200)
 		.log().body();
 	}
 
 	@Test(dataProvider="postData")
-	public void firstPOST(String rf, String sts){
-		Response r = connect(BASE_URI)
+	public void firstPOST(String u, String fn, String ln, String em, String pwd, String ph, int st){
+		connect(BASE_URI)
 		.contentType(ContentType.JSON)
-		.body(useJsonData(rf, sts))
+		.body(genUserData(u, fn, ln, em, pwd, ph, st))
 		.when()
-		.post(API_PATH);
-		
-		fid = r
-			.then()
-			.contentType(ContentType.JSON)
-			.extract()
-			.response()
-			.jsonPath()
-			.getString("id");
-		r
+		.post(API_PATH)
 		.then()
-		.statusCode(201)
+		.statusCode(200)
 		.log().all();
 	}
 	
 	@DataProvider(name="postData")
 	public Object[][] providerPOST(){
 		Object[][] postData = {
-			{"RA1","init"},
-			{"RA2","init"}
+			{uname,"003pxd","india", "abc@xyz.com", "pass123","9876543210", 0},
 		};		
 		return postData;
 	}
@@ -99,15 +94,15 @@ public class D_01072022 {
 	@DataProvider(name="putData")
 	public Object[][] providerPUT(){
 		Object[][] putData = {
-			{"1","RA1","ack"},
-			{"2","RA2","ack"}
+			{uname,"003pxd","744", "abc@xyz.com", "pass123","9876543210", 0}
 		};
 		return putData;
 	}
 	
 	@DataProvider(name="deleteData")
 	public Object[][] providerDELETE(){
-		Object[][] deleteData = {{"1"},{"2"}};
+		Object[][] deleteData = {{uname}};
 		return deleteData;
 	}
 }
+
