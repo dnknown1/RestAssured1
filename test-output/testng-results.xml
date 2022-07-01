@@ -1,25 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3036" started-at="2022-07-01T05:47:30Z" finished-at="2022-07-01T05:47:33Z">
+  <suite name="Default suite" duration-ms="3178" started-at="2022-07-01T07:28:32Z" finished-at="2022-07-01T07:28:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3036" started-at="2022-07-01T05:47:30Z" finished-at="2022-07-01T05:47:33Z">
+    <test name="Default test" duration-ms="3178" started-at="2022-07-01T07:28:32Z" finished-at="2022-07-01T07:28:35Z">
       <class name="restAssuredProject.D_01072022">
-        <test-method status="PASS" signature="firstPOST()[pri:0, instance:restAssuredProject.D_01072022@28f67ac7]" name="firstPOST" duration-ms="2380" started-at="2022-07-01T11:17:30Z" finished-at="2022-07-01T11:17:32Z">
+        <test-method status="PASS" signature="firstPOST(java.lang.String, java.lang.String)[pri:0, instance:restAssuredProject.D_01072022@2a18f23c]" name="firstPOST" duration-ms="2347" started-at="2022-07-01T12:58:32Z" data-provider="postData" finished-at="2022-07-01T12:58:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RA1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[init]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstPOST -->
-        <test-method status="PASS" signature="firstPUT()[pri:0, instance:restAssuredProject.D_01072022@28f67ac7]" name="firstPUT" duration-ms="35" started-at="2022-07-01T11:17:32Z" depends-on-methods="restAssuredProject.D_01072022.firstPOST" finished-at="2022-07-01T11:17:32Z">
+        <test-method status="PASS" signature="firstPOST(java.lang.String, java.lang.String)[pri:0, instance:restAssuredProject.D_01072022@2a18f23c]" name="firstPOST" duration-ms="24" started-at="2022-07-01T12:58:34Z" data-provider="postData" finished-at="2022-07-01T12:58:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RA2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[init]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstPOST -->
+        <test-method status="PASS" signature="firstPUT(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:restAssuredProject.D_01072022@2a18f23c]" name="firstPUT" duration-ms="85" started-at="2022-07-01T12:58:34Z" data-provider="putData" depends-on-methods="restAssuredProject.D_01072022.firstPOST" finished-at="2022-07-01T12:58:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[RA1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ack]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstPUT -->
-        <test-method status="PASS" signature="firstDELETE()[pri:0, instance:restAssuredProject.D_01072022@28f67ac7]" name="firstDELETE" duration-ms="47" started-at="2022-07-01T11:17:32Z" depends-on-methods="restAssuredProject.D_01072022.firstPUT" finished-at="2022-07-01T11:17:32Z">
+        <test-method status="PASS" signature="firstPUT(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:restAssuredProject.D_01072022@2a18f23c]" name="firstPUT" duration-ms="49" started-at="2022-07-01T12:58:34Z" data-provider="putData" depends-on-methods="restAssuredProject.D_01072022.firstPOST" finished-at="2022-07-01T12:58:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[RA2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ack]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstPUT -->
+        <test-method status="PASS" signature="firstDELETE(java.lang.String)[pri:0, instance:restAssuredProject.D_01072022@2a18f23c]" name="firstDELETE" duration-ms="60" started-at="2022-07-01T12:58:34Z" data-provider="deleteData" depends-on-methods="restAssuredProject.D_01072022.firstPUT" finished-at="2022-07-01T12:58:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstDELETE -->
-        <test-method status="PASS" signature="anotherGET()[pri:0, instance:restAssuredProject.D_01072022@28f67ac7]" name="anotherGET" duration-ms="565" started-at="2022-07-01T11:17:32Z" depends-on-methods="restAssuredProject.D_01072022.firstDELETE" finished-at="2022-07-01T11:17:33Z">
+        <test-method status="PASS" signature="firstDELETE(java.lang.String)[pri:0, instance:restAssuredProject.D_01072022@2a18f23c]" name="firstDELETE" duration-ms="23" started-at="2022-07-01T12:58:34Z" data-provider="deleteData" depends-on-methods="restAssuredProject.D_01072022.firstPUT" finished-at="2022-07-01T12:58:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstDELETE -->
+        <test-method status="PASS" signature="anotherGET()[pri:0, instance:restAssuredProject.D_01072022@2a18f23c]" name="anotherGET" duration-ms="563" started-at="2022-07-01T12:58:34Z" depends-on-methods="restAssuredProject.D_01072022.firstDELETE" finished-at="2022-07-01T12:58:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- anotherGET -->
