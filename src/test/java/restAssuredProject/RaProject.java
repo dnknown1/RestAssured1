@@ -77,7 +77,7 @@ public class RaProject {
 	@Test(dataProvider="deleteData", dependsOnMethods={"firstDELETE"})
 	public void anotherGET(String u){
 		System.out.println("GET");
-		validateNlog(200, connect(BASE_URI).get(API_PATH+u));
+		validateNlog(404, connect(BASE_URI).get(API_PATH+u));
 	}
 
 	@Test(dataProvider="postData")
